@@ -99,11 +99,11 @@ textarea:active {
     margin-bottom: 20px;
 }
 
-.search-box input{
+.search-input {
     width: 100%;
 }
 
-.search-box button {
+.search-box Button {
     padding: 5px 20px;
     background-color: rgb(189, 189, 189);
     border: none;
@@ -111,7 +111,7 @@ textarea:active {
     border-radius: 10px;
 }
 
-.search-box button:hover {
+.search-box Button:hover {
     background-color: gray;
     transform: scale(1.1);
 }
