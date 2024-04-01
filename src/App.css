@@ -1,38 +1,132 @@
-.App {
-  text-align: center;
+* {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:focus,
+button:active,
+input:focus,
+input:active,
+textarea:focus,
+textarea:active {
+    outline: none;
+    box-shadow: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* App */
+.title {
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* ContactForm */
+.contact-form {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-right: white 1px solid;
 }
 
-.App-link {
-  color: #61dafb;
+.input-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-name {
+    font-weight: 600;
+    border: none;
+    margin-bottom: 10px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+}
+
+.input-num {
+    font-size: 40px;
+    border: none;
+    margin-bottom: 20px;
+    color: white;
+    background-color: transparent;
+    text-align: center;
+}
+
+.input-form button {
+    border: none;
+    background-color: transparent;
+    color: rgb(0, 89, 255);
+    font-size: 20px;
+}
+
+.input-form button:active {
+    color: rgb(0, 0, 97);
+}
+
+.keypad tr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.keypad tr td {
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgb(92, 92, 92);
+    color: white;
+    font-size: 30px;
+    padding: 20px 32px;
+}
+
+/* ContactList */
+.container {
+    background-color: black;
+    height: 750px;
+    color: white;
+}
+
+.contact-list {
+    padding: 20px;
+}
+
+/* SearchBox */
+.search-box {
+    margin-bottom: 20px;
+}
+
+.search-box input{
+    width: 100%;
+}
+
+.search-box button {
+    padding: 5px 20px;
+    background-color: rgb(189, 189, 189);
+    border: none;
+    color: white;
+    border-radius: 10px;
+}
+
+.search-box button:hover {
+    background-color: gray;
+    transform: scale(1.1);
+}
+
+/* ContactItem */
+.contact-item {
+    background-color: white;
+    color: black;
+    margin-bottom: 5px;
+}
+
+.contact-item img {
+    display: block;
+}
+
+.info {
+    padding: 20px;
 }
