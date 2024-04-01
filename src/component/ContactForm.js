@@ -1,6 +1,6 @@
 import React,{ useState } from 'react'
 import { useDispatch } from 'react-redux';
-import { Form, Button } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const ContactForm = () => {
@@ -17,33 +17,12 @@ const ContactForm = () => {
 
   return (
     <div className='contact-form'>
-        <Form onSubmit={addContact}>
-      <Form.Group className="mb-3" controlId="formName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control
-          type="text"
-          placeholder="Enter Name"
-          onChange={(event) => {
-            setName(event.target.value);
-          }}
-        />
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="formContact">
-        <Form.Label>Phone Number</Form.Label>
-        <Form.Control
-          type="number"
-          placeholder="Enter Phone Number"
-          onChange={(event) => {
-            setphoneNumber(event.target.value);
-          }}
-        />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        추가하기
-      </Button>
-    </Form>
-        {/* <table className='keypad'>
+        <Form className='input-form' onSubmit={addContact}>
+            <input type="text" placeholder='Name' className='input-name' required onChange={(event)=>setName(event.target.value)}/>
+            <input type="number" placeholder='번호를 입력해주세요' className='input-num' required onChange={(event)=>setphoneNumber(event.target.value)} />
+            <button type="submit">번호 추가</button>
+        </Form>
+        <table className='keypad'>
             <tr>
                 <td>1</td>
                 <td>2</td>
@@ -64,7 +43,7 @@ const ContactForm = () => {
                 <td>0</td>
                 <td>#</td>
             </tr>
-        </table> */}
+        </table>
     </div>
   )
 }
